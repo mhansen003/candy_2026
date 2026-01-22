@@ -56,14 +56,23 @@ export default function Home() {
   const goNext = () => {
     if (currentIndex < sections.length - 1) {
       setActiveSection(sections[currentIndex + 1].id);
+    } else {
+      // Loop back to start
+      setActiveSection(sections[0].id);
     }
   };
 
   const goPrev = () => {
     if (currentIndex > 0) {
       setActiveSection(sections[currentIndex - 1].id);
+    } else {
+      // Loop to end
+      setActiveSection(sections[sections.length - 1].id);
     }
   };
+
+  const isLastPage = currentIndex === sections.length - 1;
+  const isFirstPage = currentIndex === 0;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -144,18 +153,13 @@ export default function Home() {
       </main>
 
       {/* Navigation Footer */}
-      <footer className="bg-[var(--card-bg)] border-t border-[var(--card-border)] py-4 px-6">
+      <footer className="bg-[var(--card-bg)] border-t border-[var(--card-border)] py-4 px-6 sticky bottom-0 z-10 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <button
             onClick={goPrev}
-            disabled={currentIndex === 0}
-            className={`flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-all ${
-              currentIndex === 0
-                ? "opacity-40 cursor-not-allowed"
-                : "bg-[var(--primary)] text-white hover:bg-[var(--primary-light)]"
-            }`}
+            className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all bg-[var(--primary)] text-white hover:bg-[var(--primary-light)]"
           >
-            ← Previous
+            ← {isFirstPage ? "Last" : "Previous"}
           </button>
           <div className="flex gap-2">
             {sections.map((section, index) => (
@@ -175,14 +179,9 @@ export default function Home() {
           </div>
           <button
             onClick={goNext}
-            disabled={currentIndex === sections.length - 1}
-            className={`flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-all ${
-              currentIndex === sections.length - 1
-                ? "opacity-40 cursor-not-allowed"
-                : "bg-[var(--accent)] text-[var(--primary)] hover:bg-[var(--accent-light)]"
-            }`}
+            className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all bg-[var(--primary)] text-white hover:bg-[var(--primary-light)]"
           >
-            Next →
+            {isLastPage ? "Start Over" : "Next"} →
           </button>
         </div>
       </footer>
