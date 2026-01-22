@@ -356,26 +356,88 @@ function AIToolsSection() {
         <p className="text-[var(--muted)]">Leveraging technology to transform our operations</p>
       </div>
 
-      {/* Carlos's FAQ Tool */}
+      {/* CANDOR Platform */}
       <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] rounded-xl p-6 text-white mb-8">
+        <div className="flex items-start gap-4">
+          <div className="text-4xl">⚡</div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold mb-2">CANDOR Automated Underwriting</h3>
+            <p className="text-white/90 mb-4">
+              AI-powered underwriting system combining intelligent document analysis with automated income calculation
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-4">
+              <div className="bg-white/10 rounded-lg p-3 text-center">
+                <div className="text-3xl font-bold">50%</div>
+                <div className="text-sm text-white/80">Faster Underwriting</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3 text-center">
+                <div className="text-3xl font-bold">10+</div>
+                <div className="text-sm text-white/80">Document Types</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3 text-center">
+                <div className="text-3xl font-bold">45min</div>
+                <div className="text-sm text-white/80">or Less Processing</div>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Pay Stubs</span>
+              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">W-2s</span>
+              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Tax Returns</span>
+              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Bank Statements</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CANDOR Reports */}
+      <div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6 shadow-sm mb-8">
+        <h3 className="text-xl font-semibold text-[var(--primary)] mb-4 flex items-center gap-2">
+          <span>📊</span> CANDOR Automated Reports
+        </h3>
+        <div className="grid md:grid-cols-4 gap-4">
+          <div className="p-4 bg-[var(--background)] rounded-lg text-center">
+            <div className="text-2xl mb-2">📋</div>
+            <h4 className="font-semibold text-[var(--primary)]">Findings</h4>
+            <p className="text-xs text-[var(--muted)]">Document analysis results</p>
+          </div>
+          <div className="p-4 bg-[var(--background)] rounded-lg text-center">
+            <div className="text-2xl mb-2">✅</div>
+            <h4 className="font-semibold text-[var(--primary)]">LIV Report</h4>
+            <p className="text-xs text-[var(--muted)]">Loan Initial Verification</p>
+          </div>
+          <div className="p-4 bg-[var(--background)] rounded-lg text-center">
+            <div className="text-2xl mb-2">📁</div>
+            <h4 className="font-semibold text-[var(--primary)]">Docs Processed</h4>
+            <p className="text-xs text-[var(--muted)]">Processing status</p>
+          </div>
+          <div className="p-4 bg-[var(--background)] rounded-lg text-center">
+            <div className="text-2xl mb-2">👤</div>
+            <h4 className="font-semibold text-[var(--primary)]">Borrower Needs</h4>
+            <p className="text-xs text-[var(--muted)]">Outstanding items</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Carlos's FAQ Tool */}
+      <div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6 shadow-sm mb-8">
         <div className="flex items-start gap-4">
           <div className="text-4xl">💬</div>
           <div>
-            <h3 className="text-xl font-bold mb-2">Teams Chat FAQ Tool</h3>
-            <p className="text-white/90 mb-4">
-              Carlos has built an innovative FAQ system that&apos;s revolutionizing how our teams find answers.
+            <h3 className="text-xl font-semibold text-[var(--primary)] mb-2">Teams Chat FAQ Tool</h3>
+            <p className="text-[var(--muted)] mb-4">
+              Carlos has built an innovative FAQ system that&apos;s revolutionizing how our teams find answers to CANDOR questions.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Real-time Support</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Knowledge Base</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Coming Soon</span>
+              <span className="px-3 py-1 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm">Real-time Support</span>
+              <span className="px-3 py-1 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm">Knowledge Base</span>
+              <span className="px-3 py-1 bg-[var(--accent)]/20 text-[var(--accent)] rounded-full text-sm">Coming Soon</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Training Tracks */}
-      <div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6 shadow-sm mb-8">
+      <div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6 shadow-sm">
         <h3 className="text-xl font-semibold text-[var(--primary)] mb-4 flex items-center gap-2">
           <span>📚</span> Specialized Training Tracks
         </h3>
@@ -400,39 +462,6 @@ function AIToolsSection() {
             <h4 className="font-semibold text-[var(--primary)]">Underwriter Track</h4>
             <p className="text-sm text-[var(--muted)]">Underwriting team training</p>
             <span className="inline-block mt-2 px-2 py-1 bg-[var(--accent)]/20 text-[var(--accent)] text-xs rounded">Planned</span>
-          </div>
-        </div>
-      </div>
-
-      {/* AI Capabilities */}
-      <div className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl p-6 shadow-sm">
-        <h3 className="text-xl font-semibold text-[var(--primary)] mb-4 flex items-center gap-2">
-          <span>🧠</span> AI-Powered Solutions
-        </h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="p-4 bg-[var(--background)] rounded-lg">
-            <h4 className="font-medium text-[var(--foreground)] mb-2">Document Pre-Screening</h4>
-            <p className="text-sm text-[var(--muted)]">
-              AI-powered document analysis to extract and validate data before it reaches Candor
-            </p>
-          </div>
-          <div className="p-4 bg-[var(--background)] rounded-lg">
-            <h4 className="font-medium text-[var(--foreground)] mb-2">Data Extraction</h4>
-            <p className="text-sm text-[var(--muted)]">
-              Automated data extraction to reduce manual entry and improve accuracy
-            </p>
-          </div>
-          <div className="p-4 bg-[var(--background)] rounded-lg">
-            <h4 className="font-medium text-[var(--foreground)] mb-2">Training Content Generation</h4>
-            <p className="text-sm text-[var(--muted)]">
-              Transform raw training data into polished, branded guides
-            </p>
-          </div>
-          <div className="p-4 bg-[var(--background)] rounded-lg">
-            <h4 className="font-medium text-[var(--foreground)] mb-2">Visual Journey Mapping</h4>
-            <p className="text-sm text-[var(--muted)]">
-              Create visual stories from Teams chat history and data
-            </p>
           </div>
         </div>
       </div>
@@ -500,19 +529,19 @@ function ConditionsPortalSection() {
           <ul className="space-y-3">
             <li className="flex items-center gap-3">
               <span className="text-[var(--accent)]">✓</span>
-              <span>[Feature placeholder 1]</span>
+              <span>Intelligent condition tracking &amp; status</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--accent)]">✓</span>
-              <span>[Feature placeholder 2]</span>
+              <span>Automated condition clearing workflow</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--accent)]">✓</span>
-              <span>[Feature placeholder 3]</span>
+              <span>Integration with CANDOR findings</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--accent)]">✓</span>
-              <span>[Feature placeholder 4]</span>
+              <span>Real-time status visibility</span>
             </li>
           </ul>
         </div>
@@ -524,7 +553,7 @@ function ConditionsPortalSection() {
           <ul className="space-y-3">
             <li className="flex items-center gap-3">
               <span className="text-[var(--primary)]">●</span>
-              <span>100% AI-powered development</span>
+              <span>100% AI-powered development with Claude</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--primary)]">●</span>
@@ -532,11 +561,11 @@ function ConditionsPortalSection() {
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--primary)]">●</span>
-              <span>Reduced manual processes</span>
+              <span>Faster condition clearing times</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[var(--primary)]">●</span>
-              <span>Improved turnaround times</span>
+              <span>100% Income Protection coverage</span>
             </li>
           </ul>
         </div>
