@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
+  /* Clean, professional light mode */
   --background: #f8fafc;
   --foreground: #0f172a;
-  --primary: #1e3a5f;
-  --primary-light: #2d5a87;
-  --accent: #d4a853;
-  --accent-light: #e8c67a;
+  --primary: #0f4c81;
+  --primary-light: #1e6cb3;
+  --accent: #0d9488;
+  --accent-light: #14b8a6;
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
   --muted: #64748b;
+  --success: #059669;
 }
 
 @theme inline {
@@ -28,15 +30,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0c1929;
+    /* Clean, professional dark mode */
+    --background: #0f172a;
     --foreground: #f1f5f9;
     --primary: #3b82f6;
     --primary-light: #60a5fa;
-    --accent: #fbbf24;
-    --accent-light: #fcd34d;
+    --accent: #14b8a6;
+    --accent-light: #2dd4bf;
     --card-bg: #1e293b;
     --card-border: #334155;
     --muted: #94a3b8;
+    --success: #10b981;
   }
 }
 
@@ -48,45 +52,49 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
-  border-radius: 4px;
 }
 
 /* Smooth transitions */
 * {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 /* Animation keyframes */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
+  from { opacity: 0; transform: translateX(-16px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  50% { opacity: 0.6; }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .animate-slideIn {
-  animation: slideIn 0.4s ease-out forwards;
+  animation: slideIn 0.35s ease-out forwards;
 }
 
 .animate-pulse-slow {
